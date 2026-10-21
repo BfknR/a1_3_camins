@@ -12,4 +12,27 @@ class AppStyles {
   static final Widget smallSeparator = SizedBox(width: 8, height: 8);
   static final Widget mediumSeparator = SizedBox(width: 16, height: 16);
   static final Widget bigSeparator = SizedBox(width: 24, height: 24);
+
+  static final TextStyle routeTitle = TextStyle(
+    color: Colors.white,
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+  );
+  static final TextStyle regionText = TextStyle(
+    color: Colors.white,
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+  );
+  static final TextStyle ratingText = TextStyle(
+    color: Colors.white,
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+  );
+  static final TextStyle reviewsText = TextStyle(color: greyText, fontSize: 11);
+
+  static final Gradient imageShade = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [Colors.transparent, Colors.black54],
+  );
 }

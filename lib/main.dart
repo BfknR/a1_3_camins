@@ -1,4 +1,4 @@
-import 'package:camins/assets/screens/trail_detail_screen.dart';
+import 'package:camins/screens/trail_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
