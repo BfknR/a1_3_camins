@@ -29,10 +29,23 @@ class AppStyles {
     fontWeight: FontWeight.bold,
   );
   static final TextStyle reviewsText = TextStyle(color: greyText, fontSize: 11);
+  static final TextStyle cardValuesText = TextStyle(
+    color: Colors.black,
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+  );
+  static final TextStyle labelText = TextStyle(
+    color: Colors.grey.shade700,
+    fontSize: 15,
+  );
 
   static final Gradient imageShade = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [Colors.transparent, Colors.black54],
+  );
+  static final SizedBox verticalDivider = SizedBox(
+    height: 40,
+    child: VerticalDivider(width: 1, thickness: 1, color: Colors.grey.shade300),
   );
 }

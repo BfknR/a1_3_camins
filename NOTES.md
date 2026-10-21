@@ -1,16 +1,22 @@
 # MY NOTES
 
+## ToDo
+- In catalan decimal numbers are separated by ',' not '.'. Must add a util to fix this when converting from double to String.
+
 ## Setup · Assets
 - Error: "The asset directory 'assets/images/' doesn't exist" (analyzer) and "Asset not found" at runtime.
 - Cause: the assets folder was inside lib/. Flutter only looks for assets at the project root.
 - Fix: moved assets/ to the root, at the same level as lib/ and pubspec.yaml.
-- Lesson: the analyzer message already gave the exact path. Reading it first would have saved me time.
 
 ## Header Image
 - It mentions it must be inside a BoxFit.Cover (I don't know why, I just did it).
 
-## Zona 2 · Títol
+## Zona 2 · Title
 - Error: text overflowing the right edge of the image.
 - Cause: Positioned only had `left`, so the Column had no width limit and the Text never wrapped.
 - Fix: added `right` to Positioned, which bounds the width.
-- Lesson: a positioned child needs both edges to know its width.
+
+## Zone 3 · Divider
+- Error: VerticalDivider filling the whole row.
+- Cause: VerticalDivider doesn't have height so it fills everything from its cointainer.
+- Fix: added a `SizedBox` containing the VerticalDivider.

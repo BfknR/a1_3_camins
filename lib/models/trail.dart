@@ -3,6 +3,11 @@ class Trail({
   required final String title,
   required final double rating,
   required final int reviewCount,
+  required final double distance,
+  required final int incline,
+  required final String time, // A string works if the value is just for show, if needed to make operations, must be converted into a proper time variable
+  required final String
+  difficulty, // This should evolve into an enum in future updates
 });
 
 final Trail estanysColomers = Trail(
@@ -10,4 +15,8 @@ final Trail estanysColomers = Trail(
   title: "Circuit dels Estanys de Colomers",
   rating: 4.8,
   reviewCount: 126,
+  distance: 9.4,
+  incline: 620,
+  time: "3 h 45",
+  difficulty: "Moderada",
 );
