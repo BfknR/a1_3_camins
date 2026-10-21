@@ -34,9 +34,18 @@ class AppStyles {
     fontSize: 15,
     fontWeight: FontWeight.bold,
   );
+  static final TextStyle sectionTitleText = TextStyle(
+    fontSize: 19,
+    fontWeight: FontWeight.bold,
+  );
   static final TextStyle labelText = TextStyle(
     color: Colors.grey.shade700,
     fontSize: 15,
+  );
+  static final TextStyle bodyText = TextStyle(
+    color: greyText,
+    fontSize: 15,
+    height: 1.5,
   );
 
   static final Gradient imageShade = LinearGradient(

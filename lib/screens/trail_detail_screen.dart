@@ -4,6 +4,7 @@ import 'package:camins/widgets/trail_header.dart';
 import 'package:flutter/material.dart';
 
 import '../styles/app_styles.dart';
+import '../widgets/trail_about.dart';
 
 class TrailDetailScreen extends StatelessWidget {
   const TrailDetailScreen({super.key});
@@ -17,10 +18,17 @@ class TrailDetailScreen extends StatelessWidget {
         children: [
           // Here will go the zones, top to bottom
           TrailHeader(trail: estanysColomers),
-          AppStyles.mediumSeparator,
+          AppStyles.bigSeparator,
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: TrailStatsCard(trail: estanysColomers),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TrailStatsCard(trail: estanysColomers),
+                AppStyles.bigSeparator,
+                TrailAbout(trail: estanysColomers),
+              ],
+            ),
           ),
         ],
       ),

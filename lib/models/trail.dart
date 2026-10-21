@@ -8,6 +8,7 @@ class Trail({
   required final String time, // A string works if the value is just for show, if needed to make operations, must be converted into a proper time variable
   required final String
   difficulty, // This should evolve into an enum in future updates
+  required final String about,
 });
 
 final Trail estanysColomers = Trail(
@@ -19,4 +20,5 @@ final Trail estanysColomers = Trail(
   incline: 620,
   time: "3 h 45",
   difficulty: "Moderada",
+  about: "Una volta circular pel cor del circ de Colomers, amb una desena d'estanys d'origen glacial. El camí està ben senyalitzat i la pujada és constant però sense trams tècnics. Ideal per a finals de primavera i estiu.",
 );

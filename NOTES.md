@@ -20,3 +20,9 @@
 - Error: VerticalDivider filling the whole row.
 - Cause: VerticalDivider doesn't have height so it fills everything from its cointainer.
 - Fix: added a `SizedBox` containing the VerticalDivider.
+
+## Zone 4 · About and tags
+- Built: TrailAbout section with a Wrap of TagChip widgets.
+- Error: chips stretched to the full width of the Wrap instead of hugging their text.
+- Cause: the Row inside TagChip took all available width. A row defaults to MainAxisSize.max.
+- Fix: mainAxisSize: MainAxisSize.min on the Row inside TagChip.
