@@ -7,6 +7,7 @@ class AppStyles {
   static final Color darkText = Color(0xFF1F2A2E);
   static final Color greyText = Color(0xFF6B7A80);
   static final Color background = Color(0xFFF6F8F7);
+  static final Color photoOverlay = Color(0xB3000000);
 
   static final Widget tinySeparator = SizedBox(width: 4, height: 4);
   static final Widget smallSeparator = SizedBox(width: 8, height: 8);
@@ -62,7 +63,12 @@ class AppStyles {
     fontWeight: FontWeight.bold,
     fontSize: 15,
   );
-
+  // Zone 5: Photos
+  static final TextStyle overlayText = TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 20,
+  );
   // Zone 6: Stages
   static final TextStyle stageTitleText = TextStyle(
     color: Colors.black,

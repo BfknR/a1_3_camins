@@ -27,11 +27,22 @@ class PhotosGrid extends StatelessWidget {
             crossAxisSpacing: 8,
           ),
           itemBuilder: (context, index) {
+            final bool isLast = index == photoPaths.length - 1;
+
             return ClipRRect(
               borderRadius: BorderRadius.circular(12.0),
-              child: Image.asset(
-                "assets/images/${photoPaths[index]}",
-                fit: BoxFit.cover,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image.asset(
+                    "assets/images/${photoPaths[index]}",
+                    fit: BoxFit.cover,
+                  ),
+                  if (isLast) ...[
+                    Container(color: AppStyles.photoOverlay),
+                    Center(child: Text("+18", style: AppStyles.overlayText)),
+                  ],
+                ],
               ),
             );
           },

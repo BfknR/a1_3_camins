@@ -40,4 +40,16 @@
 
 ## Zone 2 + 3 · Trail Data over Header
 - Trail data showing under the screen.
-- Solved by using: clipBehavior: Clip.none,
+- Solved by using: clipBehavior: Clip.none
+
+## Zone 5 · Photos Grid (Challenge)
+- Built: The last photo shows a dark overlay with "+18" on top, clipped to the rounded corners.
+- Error: The cropped images. Photos looked cut at the top and bottom.
+- Cause: The grid cells were not square, so `BoxFit.cover` cropped each photo to fit a rectangle.
+- Fix: Set `childAspectRatio: 1` in the `gridDelegate` so each cell is a square.
+
+## Zone 5 · Photos Grid (Challenge)
+- Built: The "+18" overlay on the last photo, using a spread operator inside an `if`.
+- Error: The overlay covered only part of the photo, and the three dots (`...`) in the code looked unfamiliar.
+- Cause: The `Stack` sized itself to the image instead of filling the cell. The `...` is Dart's spread operator, which inserts several widgets into a list.
+- Fix: Add `fit: StackFit.expand` to the `Stack`. Use `if (isLast) ...[...]` to add the overlay and text together.
