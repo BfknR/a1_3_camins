@@ -19,19 +19,32 @@ class StageTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: .zero,
-      leading: CircleAvatar(
-        radius: 16,
-        backgroundColor: isFinal ? AppStyles.green : AppStyles.lightGreen,
-        child: Text(
-          "${index + 1}",
-          style: isFinal ? AppStyles.whiteText : AppStyles.greenText,
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        if (!isFinal)
+          Positioned(
+            left: 15,
+            top: 32,
+            bottom: -18,
+            child: Container(width: 2, color: AppStyles.green),
+          ),
+        ListTile(
+          contentPadding: EdgeInsets.zero,
+          minTileHeight: 68,
+          leading: CircleAvatar(
+            radius: 16,
+            backgroundColor: isFinal ? AppStyles.green : AppStyles.lightGreen,
+            child: Text(
+              "${index + 1}",
+              style: isFinal ? AppStyles.whiteText : AppStyles.greenText,
+            ),
+          ),
+          title: Text(title, style: AppStyles.stageTitleText),
+          subtitle: Text(distance, style: AppStyles.stageSubtitleText),
+          trailing: Text(time, style: AppStyles.stageTimeText),
         ),
-      ),
-      title: Text(title, style: AppStyles.stageTitleText),
-      subtitle: Text(distance, style: AppStyles.stageSubtitleText),
-      trailing: Text(time, style: AppStyles.stageTimeText),
+      ],
     );
   }
 }
