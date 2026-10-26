@@ -1,4 +1,5 @@
 import 'package:camins/styles/app_styles.dart';
+import 'package:camins/widgets/header_button.dart';
 import 'package:flutter/material.dart';
 
 import '../models/trail.dart';
@@ -50,6 +51,29 @@ class TrailHeader extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+        ),
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  HeaderButton(icon: Icons.arrow_back),
+                  Row(
+                    spacing: 8,
+                    children: [
+                      HeaderButton(icon: Icons.ios_share),
+                      HeaderButton(icon: Icons.favorite_border),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ],
