@@ -42,8 +42,18 @@ class AppStyles {
     color: Colors.grey.shade700,
     fontSize: 15,
   );
+  static final TextStyle startingPointText = TextStyle(
+    color: Colors.grey.shade700,
+    fontSize: 13,
+  );
   static final TextStyle bodyText = TextStyle(
     color: greyText,
+    fontSize: 15,
+    height: 1.5,
+  );
+  static final TextStyle greenText = TextStyle(
+    color: green,
+    fontWeight: FontWeight.bold,
     fontSize: 15,
     height: 1.5,
   );

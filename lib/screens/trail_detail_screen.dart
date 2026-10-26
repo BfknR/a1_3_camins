@@ -1,4 +1,6 @@
 import 'package:camins/models/trail.dart';
+import 'package:camins/widgets/photos_grid.dart';
+import 'package:camins/widgets/trail_bottom_bar.dart';
 import 'package:camins/widgets/trail_stats_card.dart';
 import 'package:camins/widgets/trail_header.dart';
 import 'package:flutter/material.dart';
@@ -27,12 +29,16 @@ class TrailDetailScreen extends StatelessWidget {
                 TrailStatsCard(trail: estanysColomers),
                 AppStyles.bigSeparator,
                 TrailAbout(trail: estanysColomers),
+                AppStyles.bigSeparator,
+                //Zone 5: Photos
+                PhotosGrid(photoPaths: estanysColomers.photoPaths),
               ],
             ),
           ),
         ],
       ),
       // bottomNavigationBar
+      bottomNavigationBar: TrailBottomBar(),
     );
   }
 }

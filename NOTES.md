@@ -2,6 +2,7 @@
 
 ## ToDo
 - In catalan decimal numbers are separated by ',' not '.'. Must add a util to fix this when converting from double to String.
+- Fix Tag icon size
 
 ## Setup · Assets
 - Error: "The asset directory 'assets/images/' doesn't exist" (analyzer) and "Asset not found" at runtime.
@@ -26,3 +27,9 @@
 - Error: chips stretched to the full width of the Wrap instead of hugging their text.
 - Cause: the Row inside TagChip took all available width. A row defaults to MainAxisSize.max.
 - Fix: mainAxisSize: MainAxisSize.min on the Row inside TagChip.
+
+## Zone 5 · Photos Grid
+- Built: A Grid of photos that reads all the available photos of a Trail with a title over it.
+- Error: The Grid had extra padding creating a huge separation from the title.
+- Cause: Grids come with a default padding.
+- Fix: Setting the padding myself overwrote the default one.

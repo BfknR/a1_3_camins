@@ -9,6 +9,7 @@ class Trail({
   required final String
   difficulty, // This should evolve into an enum in future updates
   required final String about,
+  required final List<String> photoPaths,
 });
 
 final Trail estanysColomers = Trail(
@@ -21,4 +22,12 @@ final Trail estanysColomers = Trail(
   time: "3 h 45",
   difficulty: "Moderada",
   about: "Una volta circular pel cor del circ de Colomers, amb una desena d'estanys d'origen glacial. El camí està ben senyalitzat i la pujada és constant però sense trams tècnics. Ideal per a finals de primavera i estiu.",
+  photoPaths: [
+    "forest.jpg",
+    "lake.jpg",
+    "meadow.jpg",
+    "peaks.jpg",
+    "sunset.jpg",
+    "waterfall.jpg",
+  ],
 );

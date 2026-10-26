@@ -1,4 +1,4 @@
-package com.example.camins
+package cat.cifovirtual.camins
 
 import io.flutter.embedding.android.FlutterActivity
 

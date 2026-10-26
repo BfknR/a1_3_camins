@@ -17,7 +17,7 @@ class TagChip extends StatelessWidget {
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        children: [icon, AppStyles.tinySeparator, Text(tag)],
+        children: [icon, AppStyles.tinySeparator, Text(tag, style: AppStyles.greenText,)],
       ),
     );
   }
