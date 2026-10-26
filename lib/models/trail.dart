@@ -10,6 +10,13 @@ class Trail({
   difficulty, // This should evolve into an enum in future updates
   required final String about,
   required final List<String> photoPaths,
+  required final List<Stage> stages,
+});
+
+class Stage({
+  required final String title,
+  required final String distance, // Distance should be a double but due to the nature of the exercise we'll keep it a String.
+  required final String time,
 });
 
 final Trail estanysColomers = Trail(
@@ -30,4 +37,41 @@ final Trail estanysColomers = Trail(
     "sunset.jpg",
     "waterfall.jpg",
   ],
+  stages: [
+    banysDeTredos,
+    refugiDeColomers,
+    estanyMajor,
+    estanyObago,
+    tornadaAlsBanys,
+  ],
+);
+
+final Stage banysDeTredos = Stage(
+  title: "Banys de Tredòs",
+  distance: "Sortida · 1.750 m",
+  time: "0:00",
+);
+
+final Stage refugiDeColomers = Stage(
+  title: "Refugi de Colomers",
+  distance: "3,1 km · 2.135 m",
+  time: "1:10",
+);
+
+final Stage estanyMajor = Stage(
+  title: "Estany Major",
+  distance: "4,6 km · 2.180 m",
+  time: "1:45",
+);
+
+final Stage estanyObago = Stage(
+  title: "Estany Obago",
+  distance: "4,6 km · 2.240 m",
+  time: "2:30",
+);
+
+final Stage tornadaAlsBanys = Stage(
+  title: "Tornada als Banys",
+  distance: "9,4 km · 1.750 m",
+  time: "3:45",
 );

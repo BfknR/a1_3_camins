@@ -57,6 +57,27 @@ class AppStyles {
     fontSize: 15,
     height: 1.5,
   );
+  static final TextStyle whiteText = TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 15,
+  );
+
+  // Zone 6: Stages
+  static final TextStyle stageTitleText = TextStyle(
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
+  static final TextStyle stageSubtitleText = TextStyle(
+    color: greyText,
+    fontSize: 14,
+  );
+  static final TextStyle stageTimeText = TextStyle(
+    color: AppStyles.greyText,
+    fontWeight: .bold,
+    fontSize: 15,
+  );
 
   static final Gradient imageShade = LinearGradient(
     begin: Alignment.topCenter,

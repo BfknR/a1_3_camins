@@ -1,12 +1,13 @@
-import 'package:camins/models/trail.dart';
-import 'package:camins/widgets/photos_grid.dart';
-import 'package:camins/widgets/trail_bottom_bar.dart';
-import 'package:camins/widgets/trail_stats_card.dart';
-import 'package:camins/widgets/trail_header.dart';
 import 'package:flutter/material.dart';
 
+import '../models/trail.dart';
 import '../styles/app_styles.dart';
+import '../widgets/photos_grid.dart';
+import '../widgets/stages_list.dart';
 import '../widgets/trail_about.dart';
+import '../widgets/trail_bottom_bar.dart';
+import '../widgets/trail_header.dart';
+import '../widgets/trail_stats_card.dart';
 
 class TrailDetailScreen extends StatelessWidget {
   const TrailDetailScreen({super.key});
@@ -18,7 +19,7 @@ class TrailDetailScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          // Here will go the zones, top to bottom
+          // Zone 2: Header
           TrailHeader(trail: estanysColomers),
           AppStyles.bigSeparator,
           Padding(
@@ -26,18 +27,23 @@ class TrailDetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                //Zone 3: Fitxa
                 TrailStatsCard(trail: estanysColomers),
                 AppStyles.bigSeparator,
+                //Zone 4: About
                 TrailAbout(trail: estanysColomers),
                 AppStyles.bigSeparator,
                 //Zone 5: Photos
                 PhotosGrid(photoPaths: estanysColomers.photoPaths),
+                AppStyles.bigSeparator,
+                //Zone 6: Stages
+                StagesList(stages: estanysColomers.stages),
               ],
             ),
           ),
         ],
       ),
-      // bottomNavigationBar
+      // Zone 7: Barra inferior
       bottomNavigationBar: TrailBottomBar(),
     );
   }
