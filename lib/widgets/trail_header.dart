@@ -22,7 +22,7 @@ class TrailHeader extends StatelessWidget {
         Positioned(
           left: 16,
           right: 16,
-          bottom: 16,
+          bottom: 60,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 12,
@@ -54,26 +54,21 @@ class TrailHeader extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 0,
-          left: 0,
-          right: 0,
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          top: 44,
+          left: 16,
+          right: 16,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HeaderButton(icon: Icons.arrow_back),
+              Row(
+                spacing: 8,
                 children: [
-                  HeaderButton(icon: Icons.arrow_back),
-                  Row(
-                    spacing: 8,
-                    children: [
-                      HeaderButton(icon: Icons.ios_share),
-                      HeaderButton(icon: Icons.favorite_border),
-                    ],
-                  ),
+                  HeaderButton(icon: Icons.ios_share),
+                  HeaderButton(icon: Icons.favorite_border),
                 ],
               ),
-            ),
+            ],
           ),
         ),
       ],

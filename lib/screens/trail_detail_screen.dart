@@ -20,16 +20,26 @@ class TrailDetailScreen extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           // Zone 2: Header
-          TrailHeader(trail: estanysColomers),
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              TrailHeader(trail: estanysColomers),
+              Positioned(
+                left: 20,
+                right: 20,
+                bottom: -44,
+                child: TrailStatsCard(trail: estanysColomers),
+              ),
+            ],
+          ),
+          // Space for the part of the card that hangs below the header
+          SizedBox(height: 44),
           AppStyles.bigSeparator,
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                //Zone 3: Fitxa
-                TrailStatsCard(trail: estanysColomers),
-                AppStyles.bigSeparator,
                 //Zone 4: About
                 TrailAbout(trail: estanysColomers),
                 AppStyles.bigSeparator,

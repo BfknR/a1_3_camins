@@ -37,3 +37,7 @@
 
 ## Zone 2 · Buttons
 - As the 3 buttons look exactly the same, I'm building them as a widget on header_button.dart
+
+## Zone 2 + 3 · Trail Data over Header
+- Trail data showing under the screen.
+- Solved by using: clipBehavior: Clip.none,
