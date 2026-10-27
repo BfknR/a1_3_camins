@@ -35,7 +35,7 @@ class TrailHeader extends StatelessWidget {
                 ),
                 child: Text(
                   trail.region.toUpperCase(), // We make sure this text will always be UpperCase.
-                  style: AppStyles.regionText,
+                  style: AppStyles.smallWhiteText,
                 ),
               ),
               Text(trail.title, style: AppStyles.routeTitle),
@@ -43,7 +43,7 @@ class TrailHeader extends StatelessWidget {
                 spacing: 2,
                 children: [
                   Icon(Icons.star, color: AppStyles.orange, size: 16),
-                  Text(trail.rating.toString(), style: AppStyles.ratingText),
+                  Text(trail.rating.toString(), style: AppStyles.smallWhiteText),
                   Text(
                     "(${trail.reviewCount} opinions)",
                     style: AppStyles.reviewsText,

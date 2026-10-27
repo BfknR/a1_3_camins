@@ -2,8 +2,8 @@
 
 ## ToDo
 - In catalan decimal numbers are separated by ',' not '.'. Must add a util to fix this when converting from double to String.
-- Fix Tag icon size
-- Clean styles file (divide by zones)
+- Photos are scrollable
+- Modify received values on widgets
 
 ## Setup · Assets
 - Error: "The asset directory 'assets/images/' doesn't exist" (analyzer) and "Asset not found" at runtime.

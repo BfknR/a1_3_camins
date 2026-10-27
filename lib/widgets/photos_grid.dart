@@ -14,11 +14,12 @@ class PhotosGrid extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("Fotos", style: AppStyles.sectionTitleText),
-            Text("Veure-les totes", style: AppStyles.greenText),
+            Text("Veure-les totes", style: AppStyles.tagsText),
           ],
         ),
         GridView.builder(
           shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
           padding: EdgeInsetsDirectional.only(top: 16),
           itemCount: photoPaths.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

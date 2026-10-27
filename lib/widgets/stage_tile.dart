@@ -37,7 +37,9 @@ class StageTile extends StatelessWidget {
             backgroundColor: isFinal ? AppStyles.green : AppStyles.lightGreen,
             child: Text(
               "${index + 1}",
-              style: isFinal ? AppStyles.whiteText : AppStyles.greenText,
+              style: isFinal
+                  ? AppStyles.lastStageNumberText
+                  : AppStyles.tagsText,
             ),
           ),
           title: Text(title, style: AppStyles.stageTitleText),

@@ -20,7 +20,7 @@ class TagChip extends StatelessWidget {
         children: [
           Icon(icon, color: AppStyles.green, size: 20),
           AppStyles.tinySeparator,
-          Text(tag, style: AppStyles.greenText),
+          Text(tag, style: AppStyles.tagsText),
         ],
       ),
     );
