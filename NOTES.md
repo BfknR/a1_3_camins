@@ -1,10 +1,5 @@
 # MY NOTES
 
-## ToDo
-- In catalan decimal numbers are separated by ',' not '.'. Must add a util to fix this when converting from double to String.
-- Photos are scrollable
-- Modify received values on widgets
-
 ## Setup · Assets
 - Error: "The asset directory 'assets/images/' doesn't exist" (analyzer) and "Asset not found" at runtime.
 - Cause: the assets folder was inside lib/. Flutter only looks for assets at the project root.

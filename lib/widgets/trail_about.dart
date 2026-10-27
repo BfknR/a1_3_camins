@@ -2,8 +2,6 @@ import 'package:camins/styles/app_styles.dart';
 import 'package:camins/widgets/tag_chip.dart';
 import 'package:flutter/material.dart';
 
-import '../models/trail.dart';
-
 class TrailAbout extends StatelessWidget {
   const TrailAbout({super.key, required this.about});
 
