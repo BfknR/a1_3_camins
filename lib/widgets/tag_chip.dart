@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class TagChip extends StatelessWidget {
   const TagChip({super.key, required this.icon, required this.tag});
 
-  final Icon icon;
+  final IconData icon;
   final String tag;
 
   @override
@@ -17,7 +17,11 @@ class TagChip extends StatelessWidget {
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        children: [icon, AppStyles.tinySeparator, Text(tag, style: AppStyles.greenText,)],
+        children: [
+          Icon(icon, color: AppStyles.green, size: 20),
+          AppStyles.tinySeparator,
+          Text(tag, style: AppStyles.greenText),
+        ],
       ),
     );
   }

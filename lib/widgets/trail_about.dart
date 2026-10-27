@@ -22,26 +22,11 @@ class TrailAbout extends StatelessWidget {
           spacing: 8,
           runSpacing: 8,
           children: [
-            TagChip(
-              icon: Icon(Icons.loop, color: AppStyles.green),
-              tag: 'Circular',
-            ),
-            TagChip(
-              icon: Icon(Icons.water, color: AppStyles.green),
-              tag: 'Estanys',
-            ),
-            TagChip(
-              icon: Icon(Icons.pets, color: AppStyles.green),
-              tag: 'Gossos permesos',
-            ),
-            TagChip(
-              icon: Icon(Icons.water_drop, color: AppStyles.green),
-              tag: "Font d'aigua",
-            ),
-            TagChip(
-              icon: Icon(Icons.cabin, color: AppStyles.green),
-              tag: 'Refugi',
-            ),
+            TagChip(icon: Icons.loop, tag: 'Circular'),
+            TagChip(icon: Icons.water, tag: 'Estanys'),
+            TagChip(icon: Icons.pets, tag: 'Gossos permesos'),
+            TagChip(icon: Icons.water_drop, tag: "Font d'aigua"),
+            TagChip(icon: Icons.cabin, tag: 'Refugi'),
           ],
         ),
       ],
