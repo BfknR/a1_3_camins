@@ -1,13 +1,15 @@
-import 'package:camins/models/trail.dart';
 import 'package:camins/styles/app_styles.dart';
 import 'package:flutter/material.dart';
 
 import 'stat_item.dart';
 
 class TrailStatsCard extends StatelessWidget {
-  const TrailStatsCard({super.key, required this.trail});
+  const TrailStatsCard({super.key, required this.distance, required this.incline, required this.time, required this.difficulty});
 
-  final Trail trail;
+  final double distance;
+  final int incline;
+  final String time;
+  final String difficulty;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class TrailStatsCard extends StatelessWidget {
             Expanded(
               child: StatItem(
                 icon: Icon(Icons.route, color: AppStyles.green),
-                value: "${trail.distance} km",
+                value: "$distance km",
                 label: "Distància",
               ),
             ),
@@ -31,7 +33,7 @@ class TrailStatsCard extends StatelessWidget {
             Expanded(
               child: StatItem(
                 icon: Icon(Icons.trending_up, color: AppStyles.green),
-                value: "${trail.incline} m",
+                value: "$incline m",
                 label: "Desnivell",
               ),
             ),
@@ -39,7 +41,7 @@ class TrailStatsCard extends StatelessWidget {
             Expanded(
               child: StatItem(
                 icon: Icon(Icons.schedule, color: AppStyles.green),
-                value: trail.time,
+                value: time,
                 label: "Durada",
               ),
             ),
@@ -47,7 +49,7 @@ class TrailStatsCard extends StatelessWidget {
             Expanded(
               child: StatItem(
                 icon: Icon(Icons.terrain, color: AppStyles.orange),
-                value: trail.difficulty,
+                value: difficulty,
                 label: "Dificultat",
               ),
             ),

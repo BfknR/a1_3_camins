@@ -23,12 +23,22 @@ class TrailDetailScreen extends StatelessWidget {
           Stack(
             clipBehavior: Clip.none,
             children: [
-              TrailHeader(trail: estanysColomers),
+              TrailHeader(
+                rating: estanysColomers.rating,
+                region: estanysColomers.region,
+                reviewCount: estanysColomers.reviewCount,
+                title: estanysColomers.title,
+              ),
               Positioned(
                 left: 20,
                 right: 20,
                 bottom: -44,
-                child: TrailStatsCard(trail: estanysColomers),
+                child: TrailStatsCard(
+                  distance: estanysColomers.distance,
+                  difficulty: estanysColomers.difficulty,
+                  incline: estanysColomers.incline,
+                  time: estanysColomers.time,
+                ),
               ),
             ],
           ),
@@ -41,7 +51,7 @@ class TrailDetailScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 //Zone 4: About
-                TrailAbout(trail: estanysColomers),
+                TrailAbout(about: estanysColomers.about),
                 AppStyles.bigSeparator,
                 //Zone 5: Photos
                 PhotosGrid(photoPaths: estanysColomers.photoPaths),

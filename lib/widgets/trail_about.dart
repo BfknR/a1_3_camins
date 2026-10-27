@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import '../models/trail.dart';
 
 class TrailAbout extends StatelessWidget {
-  const TrailAbout({super.key, required this.trail});
+  const TrailAbout({super.key, required this.about});
 
-  final Trail trail;
+  final String about;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class TrailAbout extends StatelessWidget {
       children: [
         Text("Sobre la ruta", style: AppStyles.sectionTitleText),
         AppStyles.mediumSeparator,
-        Text(trail.about, style: AppStyles.bodyText),
+        Text(about, style: AppStyles.bodyText),
         AppStyles.mediumSeparator,
         Wrap(
           spacing: 8,

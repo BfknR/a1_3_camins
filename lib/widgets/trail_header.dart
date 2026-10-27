@@ -2,12 +2,19 @@ import 'package:camins/styles/app_styles.dart';
 import 'package:camins/widgets/header_button.dart';
 import 'package:flutter/material.dart';
 
-import '../models/trail.dart';
-
 class TrailHeader extends StatelessWidget {
-  const TrailHeader({super.key, required this.trail});
+  const TrailHeader({
+    super.key,
+    required this.rating,
+    required this.region,
+    required this.title,
+    required this.reviewCount,
+  });
 
-  final Trail trail;
+  final double rating;
+  final String region;
+  final String title;
+  final int reviewCount;
 
   @override
   Widget build(BuildContext context) {
@@ -34,20 +41,17 @@ class TrailHeader extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Text(
-                  trail.region.toUpperCase(), // We make sure this text will always be UpperCase.
+                  region.toUpperCase(), // We make sure this text will always be UpperCase.
                   style: AppStyles.smallWhiteText,
                 ),
               ),
-              Text(trail.title, style: AppStyles.routeTitle),
+              Text(title, style: AppStyles.routeTitle),
               Row(
                 spacing: 2,
                 children: [
                   Icon(Icons.star, color: AppStyles.orange, size: 16),
-                  Text(trail.rating.toString(), style: AppStyles.smallWhiteText),
-                  Text(
-                    "(${trail.reviewCount} opinions)",
-                    style: AppStyles.reviewsText,
-                  ),
+                  Text(rating.toString(), style: AppStyles.smallWhiteText),
+                  Text("($reviewCount opinions)", style: AppStyles.reviewsText),
                 ],
               ),
             ],
